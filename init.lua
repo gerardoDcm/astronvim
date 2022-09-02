@@ -26,7 +26,7 @@ local config = {
   },
 
   -- Set colorscheme to use
-  colorscheme = "default_theme",
+  colorscheme = "tokyonight",
 
   -- Override highlight groups in any theme
   highlights = {
@@ -178,12 +178,16 @@ local config = {
       -- ["<esc>"] = false,
     },
   },
-
   -- Configure plugins
   plugins = {
     init = {
       -- vimtex
       { "lervag/vimtex" },
+      -- Tokyo Night theme
+      {
+        "folke/tokyonight.nvim",
+        config = function() vim.g.tokyonight_style = "night" end,
+      },
       -- You can disable default plugins as follows:
       -- ["goolord/alpha-nvim"] = { disable = true },
 
