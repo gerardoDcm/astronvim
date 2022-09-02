@@ -181,8 +181,10 @@ local config = {
   -- Configure plugins
   plugins = {
     init = {
+      -- eww configuration language
+      { "elkowar/yuck.vim" },
       -- vimtex
-      { "lervag/vimtex" },
+      { "lervag/vimtex", config = function() vim.g.vimtex_view_method = "zathura" end },
       -- Tokyo Night theme
       {
         "folke/tokyonight.nvim",
